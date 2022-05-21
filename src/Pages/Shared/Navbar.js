@@ -9,7 +9,7 @@ const Navbar = () => {
         <li><Link to="/login">Login</Link></li>
     </>
     return (
-        <div className='sticky top-0'>
+        <div className='sticky top-0 bg-white'>
             <div className="navbar bg-base-30 max-w-7xl mx-auto px-12">
                 <div className="navbar-start">
                     <div className="dropdown">
