@@ -10,13 +10,13 @@ const AllReview = () => {
             .then(data => setReviews(data));
     }, [])
     return (
-        <div className='my-20'>
+        <div className='my-16'>
             <div className='text-center lg:mb-12 mb-5'>
                 <h2 className='text-primary text-3xl font-bold mb-2'>View Our All Reviews</h2>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                 {
-                    reviews?.slice(0, 6).map(review => <Review
+                    reviews.map(review => <Review
                         key={review._id}
                         review={review}
                     ></Review>)

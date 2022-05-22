@@ -13,7 +13,10 @@ const Review = ({ review }) => {
                     </div>
                     <div>
                         <h4 className='text-xl font-bold'>{review?.name}</h4>
-                        <p className='font-bold text-primary'>{review?.location}</p>
+                        <p className='font-bold '>{review?.location}</p>
+                        <div className='flex items-center '>
+                            <span className='text-primary'>Ratting: {review?.ratting}</span>
+                        </div>
                     </div>
                 </div>
                 <p>{review?.review}</p>

@@ -1,0 +1,47 @@
+[
+    {
+        "_id": 1,
+        "name": "Car While",
+        "availableQuantity": 3000,
+        "minimumOrderQuantity": 100,
+        "pricePerUnit": 10000,
+        "description": "This is a great source of premium products with worldwide delivery and 24/7 customer support!",
+        "img": "https://i.ibb.co/NZqmGjN/classes-item-1.jpg"
+    },
+    {
+        "_id": 2,
+        "name": "Car While",
+        "availableQuantity": 3000,
+        "minimumOrderQuantity": 100,
+        "pricePerUnit": 10000,
+        "description": "This is a great source of premium products with worldwide delivery and 24/7 customer support!",
+        "img": "https://i.ibb.co/NZqmGjN/classes-item-1.jpg"
+    },
+    {
+        "_id": 4,
+        "name": "Car While",
+        "availableQuantity": 3000,
+        "minimumOrderQuantity": 100,
+        "pricePerUnit": 10000,
+        "description": "This is a great source of premium products with worldwide delivery and 24/7 customer support!",
+        "img": "https://i.ibb.co/NZqmGjN/classes-item-1.jpg"
+    },
+    {
+        "_id": 5,
+        "name": "Car While",
+        "availableQuantity": 3000,
+        "minimumOrderQuantity": 100,
+        "pricePerUnit": 10000,
+        "description": "This is a great source of premium products with worldwide delivery and 24/7 customer support!",
+        "img": "https://i.ibb.co/NZqmGjN/classes-item-1.jpg"
+    },
+    {
+        "_id": 6,
+        "name": "Car While",
+        "availableQuantity": 3000,
+        "minimumOrderQuantity": 100,
+        "pricePerUnit": 10000,
+        "description": "This is a great source of premium products with worldwide delivery and 24/7 customer support!",
+        "img": "https://i.ibb.co/NZqmGjN/classes-item-1.jpg"
+    }
+]
