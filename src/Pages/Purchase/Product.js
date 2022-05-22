@@ -11,7 +11,7 @@ const Product = ({ product }) => {
         <div>
             <div className="card lg:max-w-lg bg-base-100 shadow-xl">
                 <figure className="px-5 pt-5">
-                    <img src={product?.img} alt="Shoes" className="rounded-xl" />
+                    <img src={product?.img} alt="Shoes" className="rounded-xl w-full" />
                 </figure>
                 <div className="card-body items-start">
                     <h2 className="card-title">{product?.name}</h2>

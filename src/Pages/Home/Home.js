@@ -3,7 +3,7 @@ import AllNews from './AllNews';
 import Banner from './Banner';
 import BusinessSummary from './BusinessSummary';
 import Offer from './Offer';
-import Products from './Products';
+import Products from '../Purchase/Products';
 import Reviews from './Reviews';
 
 const Home = () => {

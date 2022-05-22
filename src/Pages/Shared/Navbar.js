@@ -1,15 +1,31 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import auth from '../../firebase.init';
 
 const Navbar = () => {
+
+    const [user] = useAuthState(auth);
+
+    const logout = () => {
+        signOut(auth);
+        localStorage.removeItem('accessToken');
+    };
+
     const menuItems = <>
         <li><Link to="/">Home</Link></li>
+        <li><Link to="/products">Products</Link></li>
+        <li><Link to="/review">Reviews</Link></li>
         <li><Link to="/blog">Blogs</Link></li>
-        <li><Link to="/portfolio">My Portfolio</Link></li>
-        <li><Link to="/login">Login</Link></li>
+        <li><Link to="/portfolio">Portfolio</Link></li>
+        {
+            user && <li><Link to="/dashboard">Dashboard</Link></li>
+        }
+        <li>{user ? <Link to='' className="" onClick={logout} >Sign Out</Link> : <Link to="/login">Login</Link>}</li>
     </>
     return (
-        <div className='sticky top-0 bg-white z-40'>
+        <div className='sticky top-0 bg-white z-40 drop-shadow-xl '>
             <div className="navbar bg-base-30 max-w-7xl mx-auto px-12">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -22,7 +38,7 @@ const Navbar = () => {
                     </div>
                     <Link to='/' className="btn btn-ghost normal-case text-2xl font-bold"><span className='text-primary'>LOOK</span>UP</Link>
                 </div>
-                <div className="navbar-end hidden lg:flex">
+                <div className="navbar-end hidden lg:flex min-w-fit">
                     <ul className="menu menu-horizontal p-0">
                         {menuItems}
                     </ul>
