@@ -6,10 +6,12 @@ const Navbar = () => {
         <li><Link to="/">Home</Link></li>
         <li><Link to="/blogs">Blogs</Link></li>
         <li><Link to="/portfolio">My Portfolio</Link></li>
+
+        <li><Link to="/reviews">All Reviews</Link></li>
         <li><Link to="/login">Login</Link></li>
     </>
     return (
-        <div className='sticky top-0 bg-white'>
+        <div className='sticky top-0 bg-white z-40'>
             <div className="navbar bg-base-30 max-w-7xl mx-auto px-12">
                 <div className="navbar-start">
                     <div className="dropdown">

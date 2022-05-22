@@ -3,18 +3,24 @@
         "_id": 1,
         "name": "Abu Kawsar",
         "ratting": 4,
-        "review": "This is a great source of premium products with worldwide delivery and 24/7 customer support! Thank you and your wonderful team a lot for your professional service, quality items, and beautiful website that makes the shopping process even more fun and simple."
+        "location": "california",
+        "review": "This is a great source of premium products with worldwide delivery and 24/7 customer support! Thank you and your wonderful team a lot for your professional service, quality items, and beautiful website that makes the shopping process even more fun and simple.",
+        "img": "https://i.ibb.co/NZqmGjN/classes-item-1.jpg"
     },
     {
         "_id": 2,
         "name": "Abu Kawsar",
         "ratting": 4,
-        "review": "This is a great source of premium products with worldwide delivery and 24/7 customer support! Thank you and your wonderful team a lot for your professional service, quality items, and beautiful website that makes the shopping process even more fun and simple."
+        "location": "california",
+        "review": "This is a great source of premium products with worldwide delivery and 24/7 customer support! Thank you and your wonderful team a lot for your professional service, quality items, and beautiful website that makes the shopping process even more fun and simple.",
+        "img": "https://i.ibb.co/NZqmGjN/classes-item-1.jpg"
     },
     {
         "_id": 3,
         "name": "Abu Kawsar",
         "ratting": 4,
-        "review": "This is a great source of premium products with worldwide delivery and 24/7 customer support! Thank you and your wonderful team a lot for your professional service, quality items, and beautiful website that makes the shopping process even more fun and simple."
+        "location": "california",
+        "review": "This is a great source of premium products with worldwide delivery and 24/7 customer support! Thank you and your wonderful team a lot for your professional service, quality items, and beautiful website that makes the shopping process even more fun and simple.",
+        "img": "https://i.ibb.co/NZqmGjN/classes-item-1.jpg"
     }
 ]
