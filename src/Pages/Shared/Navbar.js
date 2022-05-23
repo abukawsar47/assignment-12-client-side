@@ -23,6 +23,7 @@ const Navbar = () => {
             user && <li><Link to="/dashboard">Dashboard</Link></li>
         }
         <li>{user ? <Link to='' className="" onClick={logout} >Sign Out</Link> : <Link to="/login">Login</Link>}</li>
+        <li>{user ? <Link to='' className="">{user?.displayName}</Link> : ''}</li>
     </>
     return (
         <div className='sticky top-0 bg-white z-40 drop-shadow-xl '>
