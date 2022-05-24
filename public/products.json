@@ -1,47 +1,74 @@
 [
     {
-        "_id": 1,
         "name": "Car While",
         "availableQuantity": 3000,
         "minimumOrderQuantity": 100,
         "pricePerUnit": 10000,
         "description": "This is a great source of premium products with worldwide delivery and 24/7 customer support!",
-        "img": "https://i.ibb.co/NZqmGjN/classes-item-1.jpg"
+        "img": "https://i.ibb.co/n3jjrqB/1.png"
     },
     {
-        "_id": 2,
-        "name": "Car While",
-        "availableQuantity": 3000,
-        "minimumOrderQuantity": 100,
-        "pricePerUnit": 10000,
+        "name": "Hanging 4K",
+        "availableQuantity": 4000,
+        "minimumOrderQuantity": 400,
+        "pricePerUnit": 20000,
         "description": "This is a great source of premium products with worldwide delivery and 24/7 customer support!",
-        "img": "https://i.ibb.co/NZqmGjN/classes-item-1.jpg"
+        "img": "https://i.ibb.co/xYPdRr5/2.png"
     },
     {
-        "_id": 4,
-        "name": "Car While",
-        "availableQuantity": 3000,
-        "minimumOrderQuantity": 100,
-        "pricePerUnit": 10000,
+        "name": "17 inch Rims 8 Lug",
+        "availableQuantity": 5000,
+        "minimumOrderQuantity": 500,
+        "pricePerUnit": 5000,
         "description": "This is a great source of premium products with worldwide delivery and 24/7 customer support!",
-        "img": "https://i.ibb.co/NZqmGjN/classes-item-1.jpg"
+        "img": "https://i.ibb.co/HFjFf2k/3.png"
     },
     {
-        "_id": 5,
-        "name": "Car While",
-        "availableQuantity": 3000,
-        "minimumOrderQuantity": 100,
-        "pricePerUnit": 10000,
+        "name": "Auto Clutch & Brake",
+        "availableQuantity": 300,
+        "minimumOrderQuantity": 30,
+        "pricePerUnit": 3000,
         "description": "This is a great source of premium products with worldwide delivery and 24/7 customer support!",
-        "img": "https://i.ibb.co/NZqmGjN/classes-item-1.jpg"
+        "img": "https://i.ibb.co/CwLRnNp/4.png"
     },
     {
-        "_id": 6,
-        "name": "Car While",
-        "availableQuantity": 3000,
-        "minimumOrderQuantity": 100,
-        "pricePerUnit": 10000,
+        "name": "Leather Steering Wheel",
+        "availableQuantity": 500,
+        "minimumOrderQuantity": 40,
+        "pricePerUnit": 4000,
         "description": "This is a great source of premium products with worldwide delivery and 24/7 customer support!",
-        "img": "https://i.ibb.co/NZqmGjN/classes-item-1.jpg"
+        "img": "https://i.ibb.co/fFM8r3z/5.png"
+    },
+    {
+        "name": "Air Intake Pump",
+        "availableQuantity": 5000,
+        "minimumOrderQuantity": 200,
+        "pricePerUnit": 2000,
+        "description": "This is a great source of premium products with worldwide delivery and 24/7 customer support!",
+        "img": "https://i.ibb.co/NYYkjd7/6.png"
+    },
+    {
+        "name": "Oe Engine",
+        "availableQuantity": 1000,
+        "minimumOrderQuantity": 5,
+        "pricePerUnit": 50000,
+        "description": "This is a great source of premium products with worldwide delivery and 24/7 customer support!",
+        "img": "https://i.ibb.co/gyYytQK/7.png"
+    },
+    {
+        "name": "Set of Four 19 Inch",
+        "availableQuantity": 300,
+        "minimumOrderQuantity": 10,
+        "pricePerUnit": 500,
+        "description": "This is a great source of premium products with worldwide delivery and 24/7 customer support!",
+        "img": "https://i.ibb.co/T2J1CZ4/8.png"
+    },
+    {
+        "name": "Brandix Brake Kit",
+        "availableQuantity": 2000,
+        "minimumOrderQuantity": 50,
+        "pricePerUnit": 5000,
+        "description": "This is a great source of premium products with worldwide delivery and 24/7 customer support!",
+        "img": "https://i.ibb.co/7vtHDR3/9.png"
     }
 ]

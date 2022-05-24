@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import Product from './Product';
 
-const Products = () => {
+const AllProduct = () => {
     const [products, setProducts] = useState([]);
 
 
@@ -25,10 +24,8 @@ const Products = () => {
                     ></Product>)
                 }
             </div>
-            <div className='mt-12 text-center'>
-                <Link to='/products' className='btn btn-primary text-white '>View All Purchase</Link>
-            </div>
         </div>
     );
 };
-export default Products;
+
+export default AllProduct;

@@ -13,6 +13,11 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import NotFound from './Pages/Shared/NotFound';
 import Dashboard from './Pages/Dashboard/Dashboard';
+import MyOrders from './Pages/Dashboard/MyOrders';
+import AddReview from './Pages/Dashboard/AddReview';
+import MyProfile from './Pages/Dashboard/MyProfile';
+import Portfolio from './Pages/Portfolio/Portfolio';
+import AllProduct from './Pages/Purchase/AllProduct';
 
 function App() {
   return (
@@ -21,11 +26,16 @@ function App() {
       <div className='max-w-7xl mx-auto px-12'>
         <Routes>
           <Route path='/' element={<Home />}></Route>
-          <Route path='/blog' element={<Blog />}></Route>
-          <Route path='/reviews' element={<AllReview />}></Route>
-          <Route path='/product/:productId' element={
+          <Route path='blog' element={<Blog />}></Route>
+          <Route path='review' element={<AllReview />}></Route>
+          <Route path='product/:productId' element={
             <RequireAuth>
               <PurchaseDetail />
+            </RequireAuth>
+          }></Route>
+          <Route path='products' element={
+            <RequireAuth>
+              <AllProduct />
             </RequireAuth>
           }></Route>
           <Route path='dashboard' element={
@@ -33,10 +43,13 @@ function App() {
               <Dashboard />
             </RequireAuth>
           }>
-
+            <Route index element={<MyOrders></MyOrders>}></Route>
+            <Route path='addReview' element={<AddReview></AddReview>}></Route>
+            <Route path='profile' element={<MyProfile></MyProfile>}></Route>
           </Route>
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<SignUp />} />
+          <Route path="portfolio" element={<Portfolio />} />
+          <Route path="login" element={<Login />} />
+          <Route path="signup" element={<SignUp />} />
           <Route path='*' element={<NotFound />}></Route>
         </Routes>
       </div>

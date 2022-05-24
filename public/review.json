@@ -3,45 +3,45 @@
         "_id": 1,
         "name": "Abu Kawsar",
         "ratting": 4,
-        "location": "california",
+        "location": "Dhaka",
         "review": "This is a great source of premium products with worldwide delivery and 24/7 customer support!.",
         "img": "https://i.ibb.co/NZqmGjN/classes-item-1.jpg"
     },
     {
         "_id": 2,
-        "name": "Abu Kawsar",
-        "ratting": 4,
-        "location": "california",
+        "name": "Tanvir Hasan",
+        "ratting": 3,
+        "location": "Cumilla",
         "review": "This is a great source of premium products with worldwide delivery and 24/7 customer support!.",
         "img": "https://i.ibb.co/NZqmGjN/classes-item-1.jpg"
     },
     {
         "_id": 3,
-        "name": "Abu Kawsar",
-        "ratting": 4,
-        "location": "california",
+        "name": "NB Kayes",
+        "ratting": 5,
+        "location": "Mirpur",
         "review": "This is a great source of premium products with worldwide delivery and 24/7 customer support!.",
         "img": "https://i.ibb.co/NZqmGjN/classes-item-1.jpg"
     },
     {
         "_id": 4,
-        "name": "Abu Kawsar",
+        "name": "MD Sabbir",
         "ratting": 4,
-        "location": "california",
+        "location": "Bashaboo",
         "review": "This is a great source of premium products with worldwide delivery and 24/7 customer support!.",
         "img": "https://i.ibb.co/NZqmGjN/classes-item-1.jpg"
     },
     {
         "_id": 5,
-        "name": "Abu Kawsar",
+        "name": "Nazim Mahmud",
         "ratting": 4,
-        "location": "california",
+        "location": "Mirpur 10",
         "review": "This is a great source of premium products with worldwide delivery and 24/7 customer support!.",
         "img": "https://i.ibb.co/NZqmGjN/classes-item-1.jpg"
     },
     {
         "_id": 6,
-        "name": "Abu Kawsar",
+        "name": "Fatema Jannat",
         "ratting": 4,
         "location": "california",
         "review": "This is a great source of premium products with worldwide delivery and 24/7 customer support!.",
@@ -49,25 +49,25 @@
     },
     {
         "_id": 7,
-        "name": "Abu Kawsar",
+        "name": "Eva Rahman",
         "ratting": 4,
-        "location": "california",
+        "location": "India",
         "review": "This is a great source of premium products with worldwide delivery and 24/7 customer support!.",
         "img": "https://i.ibb.co/NZqmGjN/classes-item-1.jpg"
     },
     {
         "_id": 8,
-        "name": "Abu Kawsar",
+        "name": "Sakib Khan",
         "ratting": 4,
-        "location": "california",
+        "location": "Ali Gong",
         "review": "This is a great source of premium products with worldwide delivery and 24/7 customer support!.",
         "img": "https://i.ibb.co/NZqmGjN/classes-item-1.jpg"
     },
     {
         "_id": 9,
-        "name": "Abu Kawsar",
+        "name": "Rifat Mia",
         "ratting": 5,
-        "location": "california",
+        "location": "Jamalpur",
         "review": "This is a great source of premium products with worldwide delivery and 24/7 customer support!.",
         "img": "https://i.ibb.co/NZqmGjN/classes-item-1.jpg"
     }
