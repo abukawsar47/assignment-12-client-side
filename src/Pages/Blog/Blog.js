@@ -75,7 +75,7 @@ const Blog = () => {
                         id: 1, name: bike, description: '', price: '$1250'
                         Here we take a array of object. When we find a products we should making the map operation. as well as this o
                         peration checking gradually and find that name which I want. We will find is dinamically as like as:
-                        <h2> Name: name  </h2></p>
+                        Name: name  </p>
                 </div>
                 <div className="divider"></div>
                 <div className="grid p-4 card bg-base-200 rounded-box place-items-start">

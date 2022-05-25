@@ -35,7 +35,7 @@ const PurchaseDetail = () => {
 
         }
         console.log(localStorage.getItem('accessToken'));
-        fetch('http://localhost:5000/order', {
+        fetch('https://safe-wildwood-72648.herokuapp.com/order', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

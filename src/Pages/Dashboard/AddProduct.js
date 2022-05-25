@@ -20,7 +20,7 @@ const AddProduct = () => {
     const handlePurchase = handleSubmit(async (data, e) => {
         console.log(data);
         console.log(localStorage.getItem('accessToken'));
-        fetch('http://localhost:5000/product', {
+        fetch('https://safe-wildwood-72648.herokuapp.com/product', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

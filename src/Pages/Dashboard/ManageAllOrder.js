@@ -4,7 +4,7 @@ import auth from '../../firebase.init';
 import { Link, useNavigate } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
 
-const MyOrders = () => {
+const ManageAllOrder = () => {
 
     const [orders, setOrders] = useState([]);
     const [user] = useAuthState(auth);
@@ -12,7 +12,7 @@ const MyOrders = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`https://safe-wildwood-72648.herokuapp.com/order?customer=${user?.email}`, {
+            fetch(`https://safe-wildwood-72648.herokuapp.com/order`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -37,7 +37,7 @@ const MyOrders = () => {
 
     return (
         <div>
-            <h2 className='font-bold my-2'>My Orders: {orders.length}</h2>
+            <h2 className='font-bold my-2'>Total Orders: {orders.length}</h2>
             <div className="overflow-x-auto">
                 <table className="table w-full">
                     <thead>
@@ -46,7 +46,7 @@ const MyOrders = () => {
                             <th>Product Name</th>
                             <th>Product Id</th>
                             <th>Price</th>
-                            <th>Order Cancel</th>
+                            <th>Order Delete</th>
                             <th>Payment</th>
 
                         </tr>
@@ -59,13 +59,11 @@ const MyOrders = () => {
                                 <td>{a?.productId}</td>
                                 <td>{a?.pricePerUnit}</td>
                                 <td>
-                                    <label htmlFor="delete-confirm-modal" className="btn btn-xs btn-error">Cancel</label>
+                                    <label htmlFor="delete-confirm-modal" className="btn btn-xs btn-error">Delete</label>
                                 </td>
                                 <td>
-                                    {(a?.pricePerUnit && !a.paid) && <Link to={`/dashboard/payment/${a?._id}`}><button className='btn btn-xs btn-success'>pay</button></Link>}
-                                    {(a?.pricePerUnit && a.paid) && <div>
-                                        <p><span className='text-success'>Paid</span></p>
-                                        <p>Transaction id: <span className='text-success'>{a.transactionId}</span></p>
+                                    {(a?.pricePerUnit && !a.paid) && <div>
+                                        <button className='btn btn-sm text-success'>Ready To Shipped</button>
                                     </div>}
                                 </td>
                             </tr>)
@@ -79,4 +77,6 @@ const MyOrders = () => {
     );
 };
 
-export default MyOrders;
+
+
+export default ManageAllOrder;
