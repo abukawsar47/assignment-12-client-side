@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# Look Up
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### Admin Email: admin47@gmail.com
+#### Admin Password: admin47
 
 ## Available Scripts
 
