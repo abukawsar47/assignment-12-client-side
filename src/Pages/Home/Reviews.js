@@ -7,9 +7,12 @@ const Reviews = () => {
 
 
     useEffect(() => {
-        fetch('review.json')
+        fetch('http://localhost:5000/review')
             .then(res => res.json())
-            .then(data => setReviews(data));
+            .then(data => {
+                const reversedData = data.reverse();
+                setReviews(reversedData)
+            });
     }, [])
     return (
         <div className='mb-16'>

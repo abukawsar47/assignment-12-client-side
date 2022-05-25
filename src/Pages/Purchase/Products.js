@@ -7,9 +7,12 @@ const Products = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/product')
+        fetch('https://safe-wildwood-72648.herokuapp.com/product')
             .then(res => res.json())
-            .then(data => setProducts(data));
+            .then(data => {
+                const reversedData = data.reverse();
+                setProducts(reversedData)
+            });
     }, [])
     return (
         <div className='my-16'>
@@ -19,7 +22,7 @@ const Products = () => {
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                 {
-                    products.slice(0, 6).map(product => <Product
+                    products.slice(0, 6).map((product) => <Product
                         key={product._id}
                         product={product}
                     ></Product>)

@@ -12,7 +12,7 @@ const MyOrders = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/order?customer=${user?.email}`, {
+            fetch(`https://safe-wildwood-72648.herokuapp.com/order?customer=${user?.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -42,22 +42,20 @@ const MyOrders = () => {
                     <thead>
                         <tr>
                             <th></th>
-                            <th>Name</th>
-                            <th>Email</th>
                             <th>Product Name</th>
                             <th>Price Per Unit</th>
                             <th>Product Id</th>
+                            <th>Product Quantity</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
                             orders.map((a, index) => <tr key={a?._id}>
                                 <th>{index + 1}</th>
-                                <td>{a?.customerName}</td>
-                                <td>{a?.customer}</td>
                                 <td>{a?.product}</td>
                                 <td>{a?.pricePerUnit}</td>
                                 <td>{a?.productId}</td>
+                                <td>{a?.quantity}</td>
                                 <td>
                                     {(a?.price && !a.paid) && <Link to={`/dashboard/payment/${a?._id}`}><button className='btn btn-xs btn-success'>pay</button></Link>}
                                     {(a?.price && a.paid) && <div>
