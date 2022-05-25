@@ -9,7 +9,7 @@ const MyProfile = () => {
     const { email, education, phone, city, linkedin } = dbUser;
 
     useEffect(() => {
-        fetch(`http://localhost:5000/user/${user?.email}`)
+        fetch(`https://safe-wildwood-72648.herokuapp.com/user/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 if (data?.insertedId) {
@@ -32,7 +32,7 @@ const MyProfile = () => {
         const user = { name: newName, email: newEmail, education, phone, city, linkedin };
         console.log(user);
 
-        fetch(`http://localhost:5000/user/${dbUser?.email}`, {
+        fetch(`https://safe-wildwood-72648.herokuapp.com/user/${dbUser?.email}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',
