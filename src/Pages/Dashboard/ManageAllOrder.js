@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
 
 const ManageAllOrder = () => {
@@ -47,7 +47,7 @@ const ManageAllOrder = () => {
                             <th>Product Id</th>
                             <th>Price</th>
                             <th>Order Delete</th>
-                            <th>Payment</th>
+                            <th>Payment Status</th>
 
                         </tr>
                     </thead>
@@ -59,11 +59,16 @@ const ManageAllOrder = () => {
                                 <td>{a?.productId}</td>
                                 <td>{a?.pricePerUnit}</td>
                                 <td>
-                                    <label htmlFor="delete-confirm-modal" className="btn btn-xs btn-error">Delete</label>
+                                    {(a?.pricePerUnit && !a.paid) && <button className='btn btn-xs btn-error'>Cancel</button>}
+                                    {(a?.pricePerUnit && a.paid) && <div>
+                                        <button className='btn btn-xs btn-error hidden'>Delete</button>
+                                    </div>}
                                 </td>
                                 <td>
-                                    {(a?.pricePerUnit && !a.paid) && <div>
-                                        <button className='btn btn-sm text-success'>Ready To Shipped</button>
+                                    {(a?.pricePerUnit && !a.paid) && <button className='btn btn-xs btn-success'>Unpaid</button>}
+                                    {(a?.pricePerUnit && a.paid) && <div className='border border-success p-2 rounded'>
+                                        <p><span className='text-success font-bold'>Ready To Shipped</span></p>
+                                        <p>Transaction id: <br /><small className='text-success'>{a.transactionId}</small></p>
                                     </div>}
                                 </td>
                             </tr>)

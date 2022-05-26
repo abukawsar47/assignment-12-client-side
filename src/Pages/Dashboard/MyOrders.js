@@ -58,14 +58,18 @@ const MyOrders = () => {
                                 <td>{a?.product}</td>
                                 <td>{a?.productId}</td>
                                 <td>{a?.pricePerUnit}</td>
+
                                 <td>
-                                    <label htmlFor="delete-confirm-modal" className="btn btn-xs btn-error">Cancel</label>
+                                    {(a?.pricePerUnit && !a.paid) && <button className='btn btn-xs btn-error'>Cancel</button>}
+                                    {(a?.pricePerUnit && a.paid) && <div>
+                                        <button className='btn btn-xs btn-error hidden'>Cancel</button>
+                                    </div>}
                                 </td>
                                 <td>
                                     {(a?.pricePerUnit && !a.paid) && <Link to={`/dashboard/payment/${a?._id}`}><button className='btn btn-xs btn-success'>pay</button></Link>}
-                                    {(a?.pricePerUnit && a.paid) && <div>
+                                    {(a?.pricePerUnit && a.paid) && <div className='border border-success p-2 rounded'>
                                         <p><span className='text-success'>Paid</span></p>
-                                        <p>Transaction id: <span className='text-success'>{a.transactionId}</span></p>
+                                        <p>Transaction id: <br /><small className='text-success'>{a.transactionId}</small></p>
                                     </div>}
                                 </td>
                             </tr>)

@@ -10,7 +10,7 @@ const AddReview = () => {
     const [user] = useAuthState(auth);
     // console.log(user);
 
-    const handlePurchase = handleSubmit(async (data, e) => {
+    const handleReview = handleSubmit(async (data, e) => {
         e.preventDefault();
 
         const review = {
@@ -19,8 +19,8 @@ const AddReview = () => {
             user: user?.email,
             review: e?.target?.review?.value,
             location: e?.target?.location?.value,
-
         }
+        console.log(user);
         console.log(review);
         console.log(localStorage.getItem('accessToken'));
         fetch('https://safe-wildwood-72648.herokuapp.com/review', {
@@ -35,7 +35,7 @@ const AddReview = () => {
                 setReview(result)
                 console.log(result);
                 if (result?.insertedId) {
-                    toast.success('Successfully placed your order!')
+                    toast.success('Successfully placed your Review!')
                 }
                 e.target.reset();
             })
@@ -45,7 +45,7 @@ const AddReview = () => {
         <section className='py-10 px-2'>
             <div className='lg:w-2/3 mx-auto shadow-xl productId  bg-base-100'>
                 <div className='p-3 my-10 w-full'>
-                    <form onSubmit={handlePurchase} className='  p-4 '>
+                    <form onSubmit={handleReview} className='  p-4 '>
                         <h1 className="text-3xl font-bold pb-3 text-primary">Add Your Review</h1>
 
                         <div className='flex lg:flex-row flex-col gap-3'>
@@ -84,7 +84,7 @@ const AddReview = () => {
                                 <span className="label-text">Comment</span>
                             </label>
 
-                            <textarea type="text" placeholder="Your address" {...register("review", { required: true, maxLength: 200 })} className="input input-bordered w-full" />
+                            <textarea type="text" placeholder="Your Comment" {...register("review", { required: true, maxLength: 200 })} className="input input-bordered w-full" />
 
                             <label className="label">
                                 <span className="label-text-alt text-error">{errors.review?.type === 'required' && "review is required"}</span>
