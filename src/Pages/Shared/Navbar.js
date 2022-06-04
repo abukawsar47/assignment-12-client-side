@@ -24,6 +24,17 @@ const Navbar = () => {
         }
         <li>{user ? <Link to='' className="" onClick={logout} >Sign Out</Link> : <Link to="/login">Login</Link>}</li>
         <li>{user ? <Link to='' className="">{user?.displayName}</Link> : ''}</li>
+        <li>
+            {user ? <div className='avatar'>
+                <div className='w-10 rounded-full ring ring-primary ring-offset-base-100'>
+                    <img src={
+                        user?.photoURL
+                            ? user?.photoURL
+                            : "https://foxdogconsultants.com/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png"
+                    } alt="user" />
+                </div>
+            </div> : ''}
+        </li>
     </>
     return (
         <div className='sticky top-0 bg-white z-40 drop-shadow-xl '>
@@ -44,7 +55,7 @@ const Navbar = () => {
                         {menuItems}
                     </ul>
                 </div>
-                <div className="navbar-end">
+                <div className="navbar-end lg:hidden">
                     <label tabIndex="1" htmlFor="dashboard-sidebar" className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
