@@ -24,12 +24,36 @@ const UserRow = ({ user, index, refetch }) => {
 
             })
     }
+
+    const handleUserDelete = id => {
+        const proceed = window.confirm('Are ypu sure you want to delete?')
+        if (proceed) {
+            console.log('Deleting User With Id:', id);
+            const url = `https://safe-wildwood-72648.herokuapp.com/user/${id}`;
+            fetch(url, {
+                method: 'DELETE',
+                headers: {
+                    authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                }
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                })
+        }
+    }
+
     return (
         <tr>
             <th>{index + 1}</th>
             <td>{email}</td>
             <td>{role !== 'admin' && <button onClick={makeAdmin} className="btn btn-xs">Make Admin</button>}</td>
-            <td><button className="btn btn-xs">Remove User</button></td>
+            <td>
+                <button
+                    onClick={handleUserDelete}
+                    className="btn btn-xs"
+                >Remove User</button>
+            </td>
         </tr>
     );
 };

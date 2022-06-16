@@ -16,7 +16,6 @@ const MyProfile = () => {
                     toast.success('Successfully added your Data!')
                 }
                 setDbUser(data);
-                console.log(data);
             });
     }, [dbUser, user?.email])
     // console.log(load);

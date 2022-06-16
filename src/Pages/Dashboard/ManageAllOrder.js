@@ -3,10 +3,12 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { useNavigate } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
+import DeleteModal from '../../components/DeleteModal';
 
 const ManageAllOrder = () => {
 
     const [orders, setOrders] = useState([]);
+    const [modalData, setModalData] = useState(null);
     const [user] = useAuthState(auth);
     const navigate = useNavigate()
 
@@ -59,9 +61,9 @@ const ManageAllOrder = () => {
                                 <td>{a?.productId}</td>
                                 <td>{a?.pricePerUnit}</td>
                                 <td>
-                                    {(a?.pricePerUnit && !a.paid) && <button className='btn btn-xs btn-error'>Cancel</button>}
+                                    {(a?.pricePerUnit && !a.paid) && <label onClick={() => { setModalData(a) }} htmlFor="delete-modal" className="btn modal-button btn-xs btn-error ">Cancel</label>}
                                     {(a?.pricePerUnit && a.paid) && <div>
-                                        <button className='btn btn-xs btn-error hidden'>Delete</button>
+                                        <button className='btn btn-xs btn-success'>Paid</button>
                                     </div>}
                                 </td>
                                 <td>
@@ -78,6 +80,13 @@ const ManageAllOrder = () => {
                     </tbody>
                 </table>
             </div>
+            {
+                modalData && <DeleteModal
+                    modalData={modalData}
+                    setModalData={setModalData}
+                    url={`https://safe-wildwood-72648.herokuapp.com/myOrder/${modalData._id}`}
+                />
+            }
         </div>
     );
 };

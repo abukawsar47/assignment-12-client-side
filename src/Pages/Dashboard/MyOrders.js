@@ -3,16 +3,18 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { Link, useNavigate } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
+import DeleteModal from '../../components/DeleteModal';
 
 const MyOrders = () => {
 
     const [orders, setOrders] = useState([]);
     const [user] = useAuthState(auth);
+    const [modalData, setModalData] = useState(null);
     const navigate = useNavigate()
 
     useEffect(() => {
         if (user) {
-            fetch(`https://safe-wildwood-72648.herokuapp.com/order?customer=${user?.email}`, {
+            fetch(`https://safe-wildwood-72648.herokuapp.com/order?customer=${user.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -33,8 +35,6 @@ const MyOrders = () => {
                 });
         }
     }, [user])
-
-
 
 
     return (
@@ -62,9 +62,11 @@ const MyOrders = () => {
                                 <td>{a?.pricePerUnit}</td>
 
                                 <td>
-                                    {(a?.pricePerUnit && !a.paid) && <button className='btn btn-xs btn-error'>Cancel</button>}
+                                    {(a?.pricePerUnit && !a.paid) && <label onClick={() => { setModalData(a) }} htmlFor="delete-modal" className="btn modal-button btn-xs btn-error ">Cancel</label>}
                                     {(a?.pricePerUnit && a.paid) && <div>
-                                        <button className='btn btn-xs btn-error hidden'>Cancel</button>
+
+                                        <button className='btn btn-xs btn-success'>Paid</button>
+
                                     </div>}
                                 </td>
                                 <td>
@@ -81,6 +83,13 @@ const MyOrders = () => {
                     </tbody>
                 </table>
             </div>
+            {
+                modalData && <DeleteModal
+                    modalData={modalData}
+                    setModalData={setModalData}
+                    url={`https://safe-wildwood-72648.herokuapp.com/myOrder/${modalData._id}`}
+                />
+            }
         </div>
     );
 };
